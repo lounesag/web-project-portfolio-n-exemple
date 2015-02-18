@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> visite guidé test "tourist" </title>
+	<style type="text/css">
+		#a {
+			text-align: center;
+			color: red;
+		}
+		.wrapper {
+			margin: 34px auto;
+			}
+		.wrapper thing1 {
+			width:	160px;
+			height:	160px;
+			background: #0F0;
+			/*margin-bottom: 	24px; */
+		}
+		/*
+		#thing2 {
+			width:	160px;
+			heigth:	160px;
+			background-color: #000;
+		}
+		*/
+	</style>
+</head>
+<body>
+	<div class = "wrapper">
+	<div id = "thing1"> </div>
+	<div id = "thing2"> </div>
+	</div>
+
+	<h1 id = "a">Tourist test  "go" </h1>
+
+	<script type="text/javascript">
+	var steps = [{
+  		content: '<p>First look at this thing</p>',
+  		highlightTarget: true,
+  		nextButton: true,
+  		target: $('#thing11'),
+  		my: 'bottom center',
+  		at: 'top center'
+	}, {
+  		content: '<p>And then at this thing</p>',
+  		highlightTarget: true,
+  		nextButton: true,
+  		target: $('#thing22'),
+  		my: 'bottom center',
+  		at: 'top center'
+	}]
+
+	var tour = new Tourist.Tour({
+  		steps: steps,
+  		tipClass: 'Bootstrap',
+  		tipOptions:{ showEffect: 'slidein' }
+	});
+	
+	tour.start();
+
+</script>
+
+<script src="tourist.js"></script>
+
+</body>
+</html>
